@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include("../handlers/connect.php");
 
 include("include/header.php");
@@ -72,12 +72,25 @@ include("../handlers/showUser.php");
                       <td> <?= $users["name"]; ?>     </td>
                       <td> <?= $users["email"]; ?>     </td>
                       <td>  
-                            <?php  if($users["status"]==0) 
+                            <?php  if(!$users["status"]==0) {
                             
-                            echo "Pending";
-                            else {
-                            echo "Approved";
+                           ?>
+                           
+                           <div class="alert alert-success" role="alert">
+                           <i class="fas fa-check"></i>
+                              </div>
+                          
+                           
+                           <?Php 
                             }
+                            else {?>
+
+                              <div class="alert alert-danger" role="alert">
+  
+                              <i class="fas fa-times"></i>
+
+                              </div>
+                           <?php  }
                             ?>
 
 

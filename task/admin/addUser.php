@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 include("include/header.php");
 include("include/sidebar.php");
@@ -47,24 +46,24 @@ include("include/sidebar.php");
                 if( isset($_SESSION["SUCSEES"])){
                    ?>
 
-<button type="button" class="btn btn-success toastrDefaultSuccess">  <?= $_SESSION["SUCSEES"] ; ?>
+                    <button type="button" class="btn btn-success toastrDefaultSuccess">  <?= $_SESSION["SUCSEES"] ; ?>
 
-</button>
+                         </button>
 
 
 
-<?php
+                        <?php
 
-unset($_SESSION["SUCSEES"]);
+                       unset($_SESSION["SUCSEES"]);
                     
-                }
+                      }
                 
-                ?>
+                      ?>
 
                
                
               
-              </div>
+          </div>
 
 
 

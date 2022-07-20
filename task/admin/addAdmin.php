@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 
 include("include/header.php");
 include("include/sidebar.php");
@@ -30,11 +30,45 @@ include("include/sidebar.php");
       <div class="col-lg-6">
         <div class="card">
           <div class="card-body">
+
+
+
+
+          
+
            
           <form action="../handlers/addAdmin.php" method="post">
                 <div class="card-body">
 
                   <div class="form-group">
+                  <?php  
+                
+                if( isset($_SESSION["SUCSEES"])){
+                   ?>
+
+                    <button type="button" class="btn btn-success toastrDefaultSuccess">  <?= $_SESSION["SUCSEES"] ; ?>
+
+                         </button>
+
+
+
+                        <?php
+
+                       unset($_SESSION["SUCSEES"]);
+                    
+                      }
+                
+                      ?>
+                      </div>
+
+
+
+
+
+
+
+
+                    <div class="form-group">
                     <label for="exampleInputEmail1">admin name</label>
                     <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="  name">
                   </div>
